@@ -1,20 +1,16 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Review extends Component {
+const Review = (props) => {
 
-  render() {
-    const { review } = this.props;
+  return (
+    <div>
+      <li>
+        {props.review.text}
+        <button onClick={() => props.deleteReview(props.review.id)}>X</button>
+      </li>
+    </div>
+  )
 
-    return (
-      <div>
-        <li>
-          {review.text}
-        </li>
-        <button> X </button>
-      </div>
-    );
-  }
-
-};
+}
 
 export default Review;
