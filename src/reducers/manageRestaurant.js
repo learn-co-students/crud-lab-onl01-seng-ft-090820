@@ -5,8 +5,9 @@ export default function manageRestaurants(state ={restaurants: [], reviews:[]}, 
         case 'ADD_RESTAURANT':
         const restaurant = {
         id: cuid(),
-        text: action.payload.text
+        text: action.text
       }
+      console.log(action)
       return { restaurants: state.restaurants.concat(restaurant) };
 
 
