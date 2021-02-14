@@ -23,7 +23,7 @@ export default function manageRestaurants(state ={restaurants: [], reviews:[]}, 
         id: cuid() 
       }
 
-      console.log(action)
+      //console.log(action)
        return { ...state, 
           reviews: [...state.reviews, review]
        }

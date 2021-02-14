@@ -21,11 +21,7 @@ class ReviewsContainer extends Component {
   }
 }
 
-const mapStateToProps = ({reviews}) => {
-  return {
-    reviews
-  }
-}
+const mapStateToProps = ({reviews}) => {reviews}
 
 const mapDispatchToProps = disptch => {
   return {
