@@ -6,8 +6,6 @@ class ReviewInput extends Component {
 
     state = {
     text: '',
-    // review: '',
-
     }
 
   handleOnChage = (e) => {
@@ -20,7 +18,10 @@ class ReviewInput extends Component {
   handleOnSubmit = (e) => {
     //console.log(e)
     e.preventDefault()
-    this.props.addReview(this.state.text)
+    this.props.addReview({
+       text: this.state.text,
+      restaurantId: this.props.restaurantId
+    })
     this.setState({
       text: '',
     })
@@ -39,15 +40,9 @@ class ReviewInput extends Component {
           value={this.state.text}
           onChange={this.handleOnChage}
           />
-          <br/>
-          {/* <input 
-          type="text"
-          name={this.state.text}
-          value={this.state.name}
-          onChange={this.handleOnChage}
-          /> */}
+          <input type="submit" />
       </form>
-      <input type="submit" />
+      
       </div>
     );
   }

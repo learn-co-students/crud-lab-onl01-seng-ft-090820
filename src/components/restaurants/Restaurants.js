@@ -20,12 +20,4 @@ class Restaurants extends Component {
 
 export default Restaurants;
 
-// const mapDispatchToProps = dispatch => {
-//   return {
-    
-//     //delete: id => dispatch({type: 'DELETE_RESTAURANT', id })
-//   }
-// }
-
-//connect(null, mapDispatchToProps)(Restaurants);
 

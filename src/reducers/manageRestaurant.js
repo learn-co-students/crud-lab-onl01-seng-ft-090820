@@ -14,17 +14,25 @@ export default function manageRestaurants(state ={restaurants: [], reviews:[]}, 
 
     return {restaurants: state.restaurants.filter(restaurant => restaurant.id !== action.id)}
 
+    
     case 'ADD_REVIEW':
-        const review = {
-        id: cuid(),
-        text: action.text
-      }
       console.log(action)
-       return { reviews: state.reviews.concat(review) };
+        const review = {
+        text: action.review.text,
+        restaurantId: action.review.restaurantId,
+        id: cuid() 
+      }
 
+      console.log(action)
+       return { ...state, 
+          reviews: [...state.reviews, review]
+       }
+      
        case 'DELETE_REVIEW':  
 
-    return {rviews: state.reviws.filter(review => review.id !== action.id)}
+    return {reviews: state.reviws.filter(review => review.id !== action.id)}
+
+
             // const restaurant = Object.assign({}, action.restaurant, {id: cuid()})
             // return Object.assign({}, state, {restaurants: state.restaurants.concat(restaurant)})
 
