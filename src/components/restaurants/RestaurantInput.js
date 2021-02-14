@@ -18,12 +18,6 @@ class RestaurantInput extends Component {
     this.setState({
       text: '',
     })
-    // this.props.store.dispatch({
-    //   type: 'ADD_RESTAURANT',
-    //   restaurant: {
-    //     text: this.state.text,
-    //   }
-    // })
   }
 
   render() {
@@ -35,7 +29,7 @@ class RestaurantInput extends Component {
           <input 
             type="text" 
             value={this.state.text} 
-            onChange={(e =>{this.handelChange(e)})}
+            onChange={this.handelChange}
           />
           <input type="submit" />
         </form>

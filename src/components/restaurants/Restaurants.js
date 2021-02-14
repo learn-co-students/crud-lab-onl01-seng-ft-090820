@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Restaurant from './Restaurant';
-import {connect} from 'react-redux';
+
 
 class Restaurants extends Component {
 
@@ -18,11 +18,14 @@ class Restaurants extends Component {
   }
 };
 
-const mapDispatchToProps = dispatch => {
-  return {
+export default Restaurants;
+
+// const mapDispatchToProps = dispatch => {
+//   return {
     
-    delete: id => dispatch({type: 'DELETE_RESTAURANT', id })
-  }
-}
-export default connect(null, mapDispatchToProps)(Restaurants);
+//     //delete: id => dispatch({type: 'DELETE_RESTAURANT', id })
+//   }
+// }
+
+//connect(null, mapDispatchToProps)(Restaurants);
 
